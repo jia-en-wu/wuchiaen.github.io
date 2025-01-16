@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobiography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='auto.css') }}">
+    <script src="{{ url_for('static', filename='auto.js') }}" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/autobiography">Autobiography</a>
+        <a href="/education">Education</a>
+        <a href="/experience">Experience</a>
+        <a href="/skill">Skill</a>
+    </div>
+    <div class="content">
+        <h1>Autobiography</h1>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.instagram.com/five_plus_n?igsh=cTZ1Mml4ZTk0MDl3&utm_source=qr">
+                <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png" alt="Instagram">
+            </a>
+            <a class="social-icon" href="https://github.com/jia-en-wu">
+                <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub">
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/佳恩-吳-79b1982b8">
+                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        
+    
+
+        <div class="personal-background">
+            <div class="content-wrapper">
+                <img src="{{ url_for('static', filename='personal_photo.jpg') }}" width="340" height="340" alt="Personal Photo">
+                <div class="text-content">
+                    <p>Hi 我叫吳佳恩，我來自台灣桃園，目前就讀於長庚大學...</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="favorite-quote">
+            <h2>喜歡的一句話</h2>
+        </div>
+        <div class="quote-card">
+            <p>糾結過去和恐懼未來，都不如抓住現在</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <h2>興趣</h2>
+        <div class="interest">
+            <h3 class="interest-title">畫畫</h3>
+            <div class="separator"></div> <!-- 添加分隔线 -->
+            <div class="artwork-gallery">
+                <div class="artwork" id="artwork">
+                    <div class="front">
+                        <img src="{{ url_for('static', filename='artwork1.jpg') }}" width="500" height="500" alt="Artwork 1">
+                    </div>
+                    <div class="back">
+                        <p>這是我的畫畫作品，我喜歡用畫筆表達內心世界...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+
+        <div class="interest">
+            <h3>運動: 桌球</h3>
+            <div class="separator"></div> <!-- 添加分隔线 -->
+            <div class="sports-photos">
+                <div class="sports-photo" id="sports-photo">
+                    <div class="front">
+                        <img src="{{ url_for('static', filename='sports_photo1.jpg') }}" width="500" height="500" alt="Sports Photo 1">
+                    </div>
+                    <div class="back">
+                        <p>這是我打桌球的照片，我喜歡運動可以讓身心都保持活力...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    
+    </div>
+    </div>
+    <script src="{{ url_for('static', filename='auto.js') }}" defer></script>
+
+</body>
+</html>

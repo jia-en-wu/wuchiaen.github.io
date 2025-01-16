@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='skill.css') }}"> <!-- 引入 skill.css -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/autobiography">Autobiography</a>
+        <a href="/education">Education</a>
+        <a href="/experience">Experience</a>
+        <a href="/skill">Skill</a>
+    </div>
+    <div class="content">
+        <h1>Skill</h1>
+        <h2>專業能力</h2>
+        <div class="skill-bar">
+            <div class="skill-label">C++</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">C</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">Python</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">R</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">HTML</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">CSS</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">JavaScript</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill pro" style="width: 60%;"></div>
+            </div>
+        </div>
+        <h2>語言能力</h2>
+        <div class="skill-bar">
+            <div class="skill-label">英文</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill lang" style="width: 61%;">
+                    <span>610/990</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-label">日語</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar-fill lang" style="width: 40%;">
+                    <span>N4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-bar-fill');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

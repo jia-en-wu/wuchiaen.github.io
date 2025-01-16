@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='experience.css') }}"> <!-- 引入 experience.css -->
+    <script src="{{ url_for('static', filename='experience.js') }}" defer></script> <!-- 引入 education.js -->
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/autobiography">Autobiography</a>
+        <a href="/education">Education</a>
+        <a href="/experience">Experience</a>
+        <a href="/skill">Skill</a>
+    </div>
+    <div class="content">
+        <h1>Experience</h1>
+        <div class="experience-item" onclick="toggleDetails(1)">
+            <p>2023/7 ~ 2024/8 MOXA四零四科技 暑假實習</p>
+            <div id="details1" class="experience-details">
+                <p>可靠度測試資料整理與分析</p>
+            </div>
+        </div>
+        <div class="experience-item" onclick="toggleDetails(2)">
+            <p>2023/10 ~ 2024/1 MOXA四零四科技 約聘</p>
+            <div id="details2" class="experience-details">
+                <p>從事設計可靠度相關計算工具</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='experience.js') }}"></script> <!-- 引入 experience.js -->
+</body>
+</html>
