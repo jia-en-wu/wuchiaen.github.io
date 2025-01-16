@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+body { 
+    font-family: Arial, sans-serif; 
+}
+
+.navbar { 
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.navbar a { 
+    margin: 0 15px; 
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.5em;
+}
+
+.content { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.social-icons { 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.social-icon { 
+    margin: 0 10px; 
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+}
+
+.social-icon img { 
+    width: 100%; 
+    height: 100%; 
+}
+
+
+
+.personal-background {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 圖片和文字之間的間隔 */
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1; /* 文字內容占據剩餘的空間 */
+}
+
+
+
+
+.personal-background img {
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.personal-background p {
+    transition: transform 0.3s ease;
+}
+
+.personal-background:hover img {
+    transform: scale(1.1); /* 將圖片放大一點 */
+}
+
+.personal-background:hover p {
+    transform: translateX(20px); /* 將文字向右偏移20px */
+}
+
+
+
+.favorite-quote {
+    margin-bottom: 20px;
+}
+
+.quote-card {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 悬停时的样式 */
+.quote-card:hover {
+    transform: scale(1.05); /* 放大 105% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+
+.interest {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: flex-start; /* 左对齐 */
+}
+
+.interest h3 {
+    flex: 1; /* 占据左半部分 */
+}
+
+.separator {
+    width: 2px;
+    height: 500px; /* 与图片高度一致 */
+    background-color: #000;
+    margin: 0 10px; /* 调整间距 */
+}
+
+.artwork-gallery,
+.sports-photos {
+    perspective: 1000px;
+    flex: 1; /* 占据右半部分 */
+}
+
+.artwork .front,
+.artwork .back,
+.sports-photo .front,
+.sports-photo .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.artwork,
+.sports-photo {
+    position: relative;
+    width: 500px; /* 修改图片宽度 */
+    height: 500px; /* 修改图片高度 */
+    transform-style: preserve-3d; /* 保持3D变换效果 */
+    transition: transform 0.5s;
+}
+
+.artwork:hover,
+.sports-photo:hover {
+    transform: rotateY(180deg);
+}
+
+.front {
+    z-index: 2; /* 设置正面在前 */
+}
+
+.back {
+    transform: rotateY(180deg); /* 默认背面隐藏 */
+}
+
+.back p {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

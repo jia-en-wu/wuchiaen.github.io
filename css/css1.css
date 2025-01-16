@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.caption {
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.skill-bar span {
+    min-width: 50px;
+}
+
+.skill-bar div {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #d3d3d3;
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.skill-bar div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: lightblue;
+    border-radius: 10px;
+    width: 0;
+    transition: width 2s ease;
+}
+
+#contact-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #337ab7;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact-icon .glyphicon {
+    font-size: 24px;
+}
+
+.character {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.character::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    top: 10px;
+}
+
+#character1 {
+    top: 450px;
+    left: 40px;
+}
+
+#character2 {
+    top: 450px;
+    left: 80px;
+}
+
+#character3 {
+    top: 450px;
+    left: 600px;
+}
+
+#character4 {
+    top: 450px;
+    left: 650px;
+}
+
+#character5 {
+    top: 450px;
+    left: 1170px;
+}
+
+#character6 {
+    top: 450px;
+    left: 1200px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    margin-right: 10px;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa; 
+    float: right; 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* 鼠标悬停时的颜色 */
+    text-decoration: none;
+    cursor: pointer; /* 鼠标指针样式为手型 */
+}
